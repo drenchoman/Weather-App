@@ -10,9 +10,9 @@
 ## Built using
 * Fetch
 * Async/Await
-* APIs:
-[OpenWeatherMap](https://openweathermap.org/)
-[Giphy](https://developers.giphy.com/)
+* APIs Used:
+  * [OpenWeatherMap](https://openweathermap.org/)
+  * [Giphy](https://developers.giphy.com/)
 
 ## License
 This project is licensed under the MIT License
