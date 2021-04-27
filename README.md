@@ -2,7 +2,7 @@
 
 > ## From The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/weather-app)
 
-> - [live demo](https://drenchoman.github.io/Weather-App/) :shipit:
+> - [live demo](https://drenchoman.github.io/Weather-App/)
 
 ## Assignment
 > Create a weather app using the Open Weather Map API.
