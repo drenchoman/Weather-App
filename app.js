@@ -11,6 +11,7 @@ const input = document.querySelector(".searchBar");
 const submit = document.querySelector(".add");
 const slider = document.querySelector(".toggleF")
 const img = document.querySelector(".weatherImage")
+const body = document.querySelector("body")
 
 async function getWeather(location) {
   const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + location + '&units=metric&appid=d3038b3303b62168dd448fbeb4531d41', {mode: 'cors'})
@@ -109,4 +110,37 @@ input.addEventListener("click", () => {
 slider.addEventListener("click", () => {
   toggleFarenheight();
 
+})
+
+// Add Darkmode
+
+let darkMode = localStorage.getItem('darkMode');
+const darkModeToggle = document.querySelector('.dark-mode-button');
+const darkModeToggleFooter = document.querySelector('footer .dark-mode-button');
+
+const enableDarkMode = () => {
+  body.classList.add('dark-mode');
+  localStorage.setItem('darkMode', 'enabled');
+  console.log(darkMode)
+}
+
+const disableDarkMode = () => {
+  body.classList.remove('dark-mode');
+  localStorage.setItem('darkMode', null)
+  console.log(darkMode)
+}
+
+if (darkMode == 'enabled') {
+  enableDarkMode();
+} else {
+  disableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode');
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
 })
